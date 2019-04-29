@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const express = require("express")
 const app = express()
 const logger = require('morgan')
@@ -60,3 +61,5 @@ app.put('/users/:id',(req,res)=>{
         res.render('users/updated')
     })
 })
+=======
+>>>>>>> parent of 1d7a021... added folders
