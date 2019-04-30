@@ -8,14 +8,14 @@ const catController = require('../controllers/catController')
 // INDEX
 //= =====================
 // Create a GET index route "/" that triggers the donut controller index function
-router.get('/', catController.index)
+// router.get('/', catController.index)
 
 
 //= =====================
 // NEW
 //= =====================
 // Create a GET new route "/new" that triggers the donut controller new function
-router.get('/new', catController.new)
+// router.get('/new', catController.new)
 
 // router.get("/cart",catController.cart)
 
@@ -23,14 +23,14 @@ router.get('/new', catController.new)
 // SHOW
 //= =====================
 // Create a GET show route "/:id" that triggers the donut controller show function
-router.get('/:id', catController.show)
+// router.get('/:id', catController.show)
 
 //= =====================
 // CREATE
 //= =====================
 // Create a POST index route "/" that triggers the donut controller create function
 
-router.post('/',catController.create)
+// router.post('/',catController.create)
 
 //= =====================
 // EDIT
@@ -55,6 +55,6 @@ router.post('/',catController.create)
 // DELETE
 //= =====================
 // Create a DELETE delete route "/:id" that triggers the donut controller delete function
-router.delete('/:id',catController.delete)
+// router.delete('/:id',catController.delete)
 
 module.exports = router
