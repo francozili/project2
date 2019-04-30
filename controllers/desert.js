@@ -1,46 +1,45 @@
-const Category = require("../models/Category");
+// const mongoose = require('../db/connection.js')
+// const desert = require('./desert.js')
+// const entree = require('./entree.js')
+// const ObjectId = mongoose.Schema.Types.ObjectId
 
-const checkoutController = {
- // INDEX
- index: function(req, res) {
-   Category.find().then(Cats => {
-     res.render("cat/index", { Cats });
-   });
- },
+// // create schemas:
+// const appetizerSchema = new mongoose.Schema({
+//     appetizerName: String,
+//     description: String,
+//     images: String,
+// })
+// let appetizerCollection = mongoose.model('Appetizer', appetizerSchema)
 
- // NEW
- new: function(req, res) {
-   res.render("cat/new");
- },
+// // show all appetizer
+// const allAppetizer = () => {
+//     return appetizerCollection.find()
+// }
+// // create new ailment
+// const newAppetizer = (newappetizer) => {
+//     return appetizerCollection.create(newappetizer)
+// }
+// // show single ailment
+// const oneAppetizer = (newappetizer) => {
+//     return appetizerCollection.findById(newappetizer)
+// }
+// // update single ailment
+// const updateAppetizer = (appetizerid, newid) => {
+//     return appetizerCollection.findByIdAndUpdate(appetizerid, newid)
+// }
+// // delete single ailment
+// const deleteAppetizer = (appetizerid) => {
+//     return appetizerCollection.findByIdAndRemove(appetizerid)
+// }
+// const deleteAllAppetizer = (appetizers) => {
+//     return appetizerCollection.deleteMany(appetizers)
+// }
 
- // SHOW
- show: function(req, res) {
-   Category.findById(req.params.id).then(Cat => {
-     res.render("cat/show", { Cat });
-   });
- },
-
- // CREATE
- create: function(req, res) {
-   console.log(req);
-   Category.create(req.body).then(() => res.redirect("/"));
- },
-
- // UPDATE
-//     Donut.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(() => {
-//       res.redirect("/" + req.params.id);
-//     });
-//   },
-
- // DELETE
- delete: function(req, res) {
-   Category.findByIdAndRemove(req.params.id).then(() => {
-     res.redirect("/");
-   });
- }
-
-};
-
-
-// EXPORTS
-module.exports = checkoutController;
+// module.exports = {
+//     allAppetizer,
+//     newAppetizer,
+//     oneAppetizer,
+//     updateAppetizer,
+//     deleteAppetizer,
+//     deleteAllAppetizer
+// }

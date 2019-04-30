@@ -1,32 +1,3 @@
-// const express = require("express")
-// const app = express()
-// const routes = require('./routes/index')
-// app.use(express.static(__dirname + '/public'))
-// app.use('/', routes)
-// // Register middleware
-// app.use(express.json())
-
-// //add middleware for handlebars here
-// app.set('view engine', 'hbs')
-
-// app.use(express.urlencoded())
-// //Boiler if using handlebars
-// const methodOverride = require("method-override")
-// app.use(methodOverride('_method'))
-// app.set('view engine', 'hbs')
-// // route handler
-
-// app.get('/', (req, res)=> {
-    
-//         res.render("home")
-//     })
-
-// const PORT = process.env.PORT || 3000 
-
-//     app.listen(PORT, () => {
-//         console.log(`App is listening on PORT ${PORT}`)
-//     })
-
 // lets us know we are using express
 const express = require('express')
 
@@ -35,8 +6,6 @@ const app = express()
 
 // for use in forms since those are only POST & GET
 const methodOverride = require('method-override')
-// logger
-const logger = require('morgan')
 // imported apis & schemas from each model
 const appetizerApi = require('./controllers/appetizer')
 const desertApi = require('./controllers/desert')
@@ -63,8 +32,6 @@ app.use('/images', express.static('images'))
 // to run handlebars
 app.set('view engine', 'hbs')
 
-// Logger provides extra information in our Node console about each request being made.
-app.use(logger('dev'))
 
 // renders home page for entire website
 app.get('/', (req, res) => {
@@ -106,31 +73,27 @@ app.delete('/appetizer/:id', (req, res) => {
     })
 })
 
-//delete all herbs
-app.delete('/herbs', (req, res) => {
-    herbApi.deleteAllHerbs(req.params.id).then(() => {
-        res.redirect('/herbs')
+//delete all appetizer 
+app.delete('/appetizer', (req, res) => {
+    appetizerApi.deleteAllAppetizer(req.params.id).then(() => {
+        res.redirect('/appetizer')
     })
 })
 
-//update single herb
-app.get('/herbs/:id/edit', (req, res) => {
-    herbApi.oneHerb(req.params.id)
-        .then(herb => {
-            res.render('herbs/edit', { herb })
+//update single appetizer
+app.get('/appetizer/:id/edit', (req, res) => {
+    appetizerApi.oneAppetizer(req.params.id)
+        .then(appetizer => {
+            res.render('appetizer/edit', { appetizer })
         })
 })
 
-app.put('/herbs/:id', (req, res) => {
-    herbApi.updateHerb(req.params.id, req.body)
+app.put('/appetizer/:id', (req, res) => {
+    appetizerApi.updateAppetizer(req.params.id, req.body)
         .then(() => {
-            res.redirect(`/herbs/${req.params.id}`)
+            res.redirect(`/appetizer/${req.params.id}`)
         })
 })
-
-//= =====================================================
-// OILS
-//= =====================================================
 
 // list/ index of all oils
 app.get('/oils', (req, res) => {
@@ -304,5 +267,5 @@ app.put('/ailments/:id', (req, res) => {
 
 let PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
-    console.log('working')
+    console.log(`App is listening on PORT ${PORT}`)
 })
