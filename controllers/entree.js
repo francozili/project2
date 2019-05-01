@@ -1,45 +1,42 @@
-// const mongoose = require('../db/connection.js')
-// const desert = require('./desert.js')
-// const entree = require('./entree.js')
-// const ObjectId = mongoose.Schema.Types.ObjectId
+const mongoose = require('../db/connection.js')
 
-// // create schemas:
-// const appetizerSchema = new mongoose.Schema({
-//     appetizerName: String,
-//     description: String,
-//     images: String,
-// })
-// let appetizerCollection = mongoose.model('Appetizer', appetizerSchema)
+const entreeSchema = new mongoose.Schema({
+    entreeName: String,
+    directions: String,
+    picture: String,
+    ingridents: [String]
+})
+let entreeCollection = mongoose.model('Entree', entreeSchema)
 
-// // show all appetizer
-// const allAppetizer = () => {
-//     return appetizerCollection.find()
-// }
-// // create new ailment
-// const newAppetizer = (newappetizer) => {
-//     return appetizerCollection.create(newappetizer)
-// }
-// // show single ailment
-// const oneAppetizer = (newappetizer) => {
-//     return appetizerCollection.findById(newappetizer)
-// }
-// // update single ailment
-// const updateAppetizer = (appetizerid, newid) => {
-//     return appetizerCollection.findByIdAndUpdate(appetizerid, newid)
-// }
-// // delete single ailment
-// const deleteAppetizer = (appetizerid) => {
-//     return appetizerCollection.findByIdAndRemove(appetizerid)
-// }
-// const deleteAllAppetizer = (appetizers) => {
-//     return appetizerCollection.deleteMany(appetizers)
-// }
+// show all entree
+const allEntree = () => {
+    return entreeCollection.find()
+}
+// create new entree
+const newEntree = (newentree) => {
+    return entreeCollection.create(newentree)
+}
+// show single entree
+const oneEntree= (newentree) => {
+    return entreeCollection.findById(newentree)
+}
+// update single entree
+const updateEntree = (entreeid, newid) => {
+    return entreeCollection.findByIdAndUpdate(entreeid, newid)
+}
+// delete single entree
+const deleteEntree = (entreeid) => {
+    return entreeCollection.findByIdAndRemove(entreeid)
+}
+const deleteAllEntree = (entree) => {
+    return entreeCollection.deleteMany(entree)
+}
 
-// module.exports = {
-//     allAppetizer,
-//     newAppetizer,
-//     oneAppetizer,
-//     updateAppetizer,
-//     deleteAppetizer,
-//     deleteAllAppetizer
-// }
+module.exports = {
+    allEntree,
+    newEntree,
+    oneEntree,
+    updateEntree,
+    deleteEntree,
+    deleteAllEntree
+}

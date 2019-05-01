@@ -6,9 +6,10 @@ const ObjectId = mongoose.Schema.Types.ObjectId
 // create schemas:
 const appetizerSchema = new mongoose.Schema({
     appetizerName: String,
-    directions: String,
+    directions: [String],
     picture: String,
-    ingridents: [String]
+    ingridents: [String],
+    nutritionFacts: String
 })
 let appetizerCollection = mongoose.model('Appetizer', appetizerSchema)
 

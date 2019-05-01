@@ -1,5 +1,5 @@
-@font-face{ font-family:walt; src: url(/fonts/waltographUI.ttf); }
-@font-face{ font-family:cold; src: url(/fonts/Black\ Santa.ttf); }
+@font-face{ font-family:walt; src: url(/fonts/waltograph.ttf); }
+@font-face{ font-family:cold; src: url(/fonts/Blacksanta.ttf); }
 @font-face{ font-family:horror; src: url(/fonts/FEASFBRG.TTF); }
 @font-face{ font-family:sky; src: url(/fonts/Blaize.otf); }
 @font-face{ font-family:john; src: url(/fonts/johnnytorchexpand.ttf); }
@@ -55,7 +55,7 @@ nav img{
     text-decoration: none;
     font-size: 1.5em;
     color: black;
-    font-family: fantasy;
+    font-family: walt;
     text-shadow: blue;
 }
 #menuForCourseMeal a:hover{
@@ -104,11 +104,11 @@ p{
     font-family: 'Poppins', sans-serif;
     text-shadow: #414141 3px 3px 10px;
 }
-img{
+/* img{
     height: 400vh;
     width: 200px;
     border-radius: 90px;
-}
+} */
 /* =============content================ */
 main{
     text-align: center;
@@ -208,7 +208,7 @@ main{
 .herb ul, .oil ul, .sup ul{
     list-style: none;
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: cold;
 }
 .buttons{
     display: flex;
@@ -248,13 +248,14 @@ main{
 
 .footer{
     /* height: 25%; */
+    font-family: cold;
     display: flex;
     justify-content: space-around;
     padding: 30px 20px;
     border: solid gray;
     background:olive;
     /* margin-bottom: 0px; */
-    margin-bottom:-900px;
+    /* margin-bottom:-900px; */
     /* height:10vh */
 }
 

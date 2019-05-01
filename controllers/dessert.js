@@ -2,9 +2,9 @@ const mongoose = require('../db/connection.js')
 
 const dessertSchema = new mongoose.Schema({
     dessertName: String,
-    directions: String,
+    directions: [String],
     picture: String,
-    ingridents: String
+    ingridents: [String]
 })
 
 let dessertCollection = mongoose.model('Dessert', dessertSchema)
