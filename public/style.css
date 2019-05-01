@@ -25,6 +25,10 @@ html {
 .logoclass:hover{
 opacity:.7;
 transform:scale(1.5);
+border-radius: 90px;
+}
+.logoclass{
+border-radius: 90px; 
 }
 /* =============navbar================ */
 nav{

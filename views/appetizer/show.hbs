@@ -1,0 +1,56 @@
+<main>
+    <div class="herb-container">
+        <a id='returnlink' href="/appetizer">Return to All Appetizers</a>
+        <br><br>
+        <div class="herb ailment">
+            <h3 id="nameone"> {{ appetizer.appetizerName }} </h3>
+            <div class="buttons ailbuttons">
+                <a href="/appetizer/{{appetizer.id}}/update">
+                    <input type="submit" value="Modify appetizer" class="button">
+                </a>
+                <form action="/appetizer/{{appetizer.id}}?_method=delete" method="POST">
+                    <input type="submit" value="Delete appetizer" class="button">
+                </form>
+            </div>
+            <img src="../images/{{ appetizer.picture }}" alt="" srcset="">
+            <p>{{appetizer.directions}}</p>
+
+        </div>
+    </div>
+    <h3>Recipe for {{appetizer.appetizerName}}</h3>
+    <div class="herbs-container ailmentherbs">
+
+        {{#each appetizer}}
+        <div class="herbs">
+            <a href="/appetizer/{{_id}}">
+                <h3> {{ appetizer.appetizerName }} </h3>
+                <img src="../images/{{ appetizer.picture }}" alt="" srcset="">
+            </a>
+        </div>
+        {{/each}}
+    </div>
+    <h3>Essential Oils for {{appetizer.appetizerName}}</h3>
+    <div class="herbs-container ailmentherbs">
+
+        {{#each appetizer}}
+        <div class="herbs">
+            <a href="/appetizer/{{_id}}">
+                <h3> {{ appetizer.appetizerName }} </h3>
+                <img src="../images/{{ appetizer.picture }}" alt="" srcset="">
+            </a>
+        </div>
+        {{/each}}
+    </div>
+    <h3>Supplements for {{appetizer.appetizerName}}</h3>
+    <div class="herbs-container ailmentherbs">
+
+        {{#each appetizer}}
+        <div class="herbs">
+            <a href="/appetizer/{{_id}}">
+                <h3> {{ appetizer.appetizerName }} </h3>
+                <img src="../images/{{ appetizer.picture }}" alt="" srcset="">
+            </a>
+        </div>
+        {{/each}}
+    </div>
+</main>

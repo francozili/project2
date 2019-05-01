@@ -1,0 +1,32 @@
+<div class="background">
+    <d>
+        <h2>Search By Appetizers</h2>
+
+        <div class="herbs-container">
+            {{#each appetizer}}
+            <div class="herbs">
+                <a href="/appetizer/{{_id}}">
+                    <h3> {{ appetizerName }} </h3>
+                    <img src="../images/{{ picture }}" alt="" srcset="">
+                </a>
+            </div>
+
+            {{/each}}
+        </div>
+        <br><br>
+        <div class="forms">
+            <div class="create">
+                <p>Didn't Find What You Were Looking For?</p>
+                <a href="/appetizer/new">
+                    <input class="button" id="createbutton" type="submit" value="Add Appetizer">
+                </a>
+            </div>
+            <div class="deleteall">
+
+                <p>Delete All Appetizers</p>
+                <form action="/appetizer/?_method=delete" method="POST">
+                    <input id="createbutton" class="button" type="submit" value="Delete All">
+                </form>
+            </div>
+        </div>
+</div>
