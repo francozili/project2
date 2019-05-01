@@ -8,13 +8,9 @@ const app = express()
 const methodOverride = require('method-override')
 // imported apis & schemas from each model
 const appetizerApi = require('./controllers/appetizer')
-const desertApi = require('./controllers/desert')
+const dessertApi = require('./controllers/dessert')
 const entreeApi = require('./controllers/entree')
 
-//= =====================
-// MIDDLEWARE
-//= =====================
-// body parser(req.body) for classic encoding if false
 app.use(express.urlencoded({ extended: true }))
 
 // body parser using JSON
@@ -28,6 +24,9 @@ app.use('/public', express.static("public"))
 
 // to link image folder
 app.use('/images', express.static('images'))
+
+// to link fonts
+app.use('/fonts', express.static('fonts'))
 
 // to run handlebars
 app.set('view engine', 'hbs')
@@ -95,175 +94,116 @@ app.put('/appetizer/:id', (req, res) => {
         })
 })
 
-// list/ index of all oils
-app.get('/oils', (req, res) => {
-    oilApi.allOils().then(oils => {
-        console.log(oilApi.allOils())
-        res.render('oils/index', { oils })
+// list/ index of all dessert
+app.get('/dessert', (req, res) => {
+    dessertApi.allDessert().then(dessert => {
+        console.log(dessertApi.allDessert())
+        res.render('dessert/index', { dessert })
     })
 })
 
-// create new oil
-app.get('/oils/new', (req, res) => {
-    res.render('oils/new')
+// create new dessert
+app.get('/dessert/new', (req, res) => {
+    res.render('dessert/new')
 })
 
-app.post('/oils', (req, res) => {
-    oilApi.newOil(req.body)
+app.post('/dessert', (req, res) => {
+    dessertApi.newDessert(req.body)
     .then(() => {
-        res.redirect('/oils')
+        res.redirect('/dessert')
     })
 })
 
-// show single oil
-app.get('/oils/:id', (req, res) => {
-    oilApi.oneOil(req.params.id).then(oil => {
-        res.render('oils/show', { oil })
+// show single dessert
+app.get('/dessert/:id', (req, res) => {
+    dessertApi.oneDessert(req.params.id).then(dessert => {
+        res.render('dessert/show', { dessert })
     })
 })
 
-//delete single oil
-app.delete('/oils/:id', (req, res) => {
-    oilApi.deleteOil(req.params.id).then(() => {
-        res.redirect('/oils')
+//delete single dessert
+app.delete('/dessert/:id', (req, res) => {
+    dessertApi.deleteDessert(req.params.id).then(() => {
+        res.redirect('/dessert')
     })
 })
-//delete all oils
-app.delete('/oils', (req, res) => {
-    oilApi.deleteAllOils(req.params.id).then(() => {
-        res.redirect('/oils')
+//delete all dessert
+app.delete('/dessert', (req, res) => {
+    dessertApi.deleteAllDessert(req.params.id).then(() => {
+        res.redirect('/dessert')
     })
 })
 
-//update single oil
-app.get('/oils/:id/edit', (req, res) => {
-    oilApi.oneOil(req.params.id)
-        .then(oil => {
-            res.render('oils/edit', { oil })
+//update single dessert
+app.get('/dessert/:id/edit', (req, res) => {
+    dessertApi.oneDessert(req.params.id)
+        .then(dessert => {
+            res.render('dessert/edit', { dessert })
         })
 })
 
-app.put('/oils/:id', (req, res) => {
-    oilApi.updateOil(req.params.id, req.body)
+app.put('/dessert/:id', (req, res) => {
+    dessertApi.updateDessert(req.params.id, req.body)
         .then(() => {
-            res.redirect(`/oils/${req.params.id}`)
+            res.redirect(`/dessert/${req.params.id}`)
         })
 })
 
-//= =====================================================
-// SUPPLEMENTS
-//= =====================================================
 
-// list/ index of all supplements
-app.get('/sups', (req, res) => {
-    supApi.allSups().then(sups => {
-        console.log(supApi.allSups())
-        res.render('sups/index', { sups })
+// list/ index of all entree
+app.get('/entree', (req, res) => {
+    entreeApi.allEntree().then(entree => {
+        console.log(entreeApi.allEntree())
+        res.render('entree/index', { entree })
     })
 })
 
-// create new supplement
-app.get('/sups/new', (req, res) => {
-    res.render('sups/new')
+// create new entree
+app.get('/entree/new', (req, res) => {
+    res.render('entree/new')
 })
-app.post('/sups', (req, res) => {
-    supApi.newSup(req.body)
+app.post('/entree', (req, res) => {
+    entreeApi.newEntree(req.body)
     .then(() => {
-        res.redirect('/sups')
+        res.redirect('/entree')
     })
 })
 
-// show single supplement
-app.get('/sups/:id', (req, res) => {
-    supApi.oneSup(req.params.id).then(sup => {
-        res.render('sups/show', { sup })
+// show single entree
+app.get('/entree/:id', (req, res) => {
+    entreeApi.oneEntree(req.params.id).then(entree => {
+        res.render('entree/show', { entree })
     })
 })
 
-//delete single supplement
-app.delete('/sups/:id', (req, res) => {
-    supApi.deleteSup(req.params.id).then(() => {
-        res.redirect('/sups')
+//delete single entree
+app.delete('/entree/:id', (req, res) => {
+    entreeApi.deleteEntree(req.params.id).then(() => {
+        res.redirect('/entree')
     })
 })
-//delete all supplements
-app.delete('/sups', (req, res) => {
-    supApi.deleteAllSups(req.params.id).then(() => {
-        res.redirect('/sups')
+//delete all entree
+app.delete('/entree', (req, res) => {
+    entreeApi.deleteAllEntree(req.params.id).then(() => {
+        res.redirect('/entree')
     })
 })
-//update single supplement
-app.get('/sups/:id/edit', (req, res) => {
-    supApi.oneSup(req.params.id)
-    .then(sup => {
-        res.render('sups/edit', { sup })
+//update single entree
+app.get('/entree/:id/edit', (req, res) => {
+    entreeApi.oneEntree(req.params.id)
+    .then(entree => {
+        res.render('entree/edit', { entree })
     })
 })
 
-app.put('/sups/:id', (req, res) => {
-    supApi.updateSup(req.params.id, req.body)
+app.put('/entree/:id', (req, res) => {
+    entreeApi.updateEntree(req.params.id, req.body)
         .then(() => {
-            res.redirect(`/sups/${req.params.id}`)
+            res.redirect(`/entree/${req.params.id}`)
         })
 })
 
-//= =====================================================
-// AILMENTS
-//= =====================================================
 
-// list/ index of all ailments
-app.get('/ailments', (req, res) => {
-    ailApi.allAilments().then(ailments => {
-        // console.log(ailApi.allAilments())
-        res.render('ailments/index', { ailments })
-    })
-})
-
-// create new ailment
-app.get('/ailments/new', (req, res) => {
-    res.render('ailments/new')
-})
-
-app.post('/ailments', (req, res) => {
-    ailApi.newAilment(req.body).then(() => {
-        res.redirect('/ailments')
-    })
-})
-
-// show single ailment
-app.get('/ailments/:id', (req, res) => {
-    ailApi.oneAilment(req.params.id).then(ailment => {
-        res.render('ailments/show', { ailment })
-    })
-})
-
-//delete single ailment
-app.delete('/ailments/:id', (req, res) => {
-    ailApi.deleteAilment(req.params.id).then(() => {
-        res.redirect('/ailments')
-    })
-})
-//delete all ailment
-app.delete('/ailments', (req, res) => {
-    ailApi.deleteAllAilments(req.params.id).then(() => {
-        res.redirect('/ailments')
-    })
-})
-
-//update single ailment
-app.get('/ailments/:id/edit', (req, res) => {
-    ailApi.oneAilment(req.params.id)
-    .then(ailment => {
-        res.render('ailments/edit', { ailment })
-    })
-})
-
-app.put('/ailments/:id', (req, res) => {
-    ailApi.updateAilment(req.params.id, req.body)
-        .then(() => {
-            res.redirect(`/ailments/${req.params.id}`)
-        })
-})
 
 let PORT = process.env.PORT || 3000
 app.listen(PORT, () => {

@@ -1,13 +1,14 @@
 const mongoose = require('../db/connection.js')
-const desert = require('./desert.js')
+const dessert = require('./dessert.js')
 const entree = require('./entree.js')
 const ObjectId = mongoose.Schema.Types.ObjectId
 
 // create schemas:
 const appetizerSchema = new mongoose.Schema({
     appetizerName: String,
-    description: String,
-    images: String,
+    directions: String,
+    picture: String,
+    ingridents: [String]
 })
 let appetizerCollection = mongoose.model('Appetizer', appetizerSchema)
 
@@ -43,3 +44,4 @@ module.exports = {
     deleteAppetizer,
     deleteAllAppetizer
 }
+

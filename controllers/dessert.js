@@ -1,45 +1,45 @@
-// const mongoose = require('../db/connection.js')
-// const desert = require('./desert.js')
-// const entree = require('./entree.js')
-// const ObjectId = mongoose.Schema.Types.ObjectId
+const mongoose = require('../db/connection.js')
 
-// // create schemas:
-// const appetizerSchema = new mongoose.Schema({
-//     appetizerName: String,
-//     description: String,
-//     images: String,
-// })
-// let appetizerCollection = mongoose.model('Appetizer', appetizerSchema)
+const dessertSchema = new mongoose.Schema({
+    dessertName: String,
+    directions: String,
+    picture: String,
+    ingridents: String
+})
 
-// // show all appetizer
-// const allAppetizer = () => {
-//     return appetizerCollection.find()
-// }
-// // create new ailment
-// const newAppetizer = (newappetizer) => {
-//     return appetizerCollection.create(newappetizer)
-// }
-// // show single ailment
-// const oneAppetizer = (newappetizer) => {
-//     return appetizerCollection.findById(newappetizer)
-// }
-// // update single ailment
-// const updateAppetizer = (appetizerid, newid) => {
-//     return appetizerCollection.findByIdAndUpdate(appetizerid, newid)
-// }
-// // delete single ailment
-// const deleteAppetizer = (appetizerid) => {
-//     return appetizerCollection.findByIdAndRemove(appetizerid)
-// }
-// const deleteAllAppetizer = (appetizers) => {
-//     return appetizerCollection.deleteMany(appetizers)
-// }
+let dessertCollection = mongoose.model('Dessert', dessertSchema)
 
-// module.exports = {
-//     allAppetizer,
-//     newAppetizer,
-//     oneAppetizer,
-//     updateAppetizer,
-//     deleteAppetizer,
-//     deleteAllAppetizer
-// }
+// show all dessert
+const allDessert = () => {
+    return dessertCollection.find()
+}
+// create new dessert
+const newDessert = (newdessert) => {
+    return dessertCollection.create(newdessert)
+}
+// show single dessert
+const oneDessert = (newdessert) => {
+    return dessertCollection.findById(newdessert)
+}
+// update single dessert
+const updateDessert = (dessertid, newid) => {
+    return dessertCollection.findByIdAndUpdate(dessertid, newid)
+}
+// delete single dessert
+const deleteDesert = (dessertid) => {
+    return dessertCollection.findByIdAndRemove(dessertid)
+}
+const deleteAllDessert = (dessert) => {
+    return dessertCollection.deleteMany(dessert)
+}
+
+
+// export the controller with module.exports
+module.exports = {
+    allDessert,
+    newDessert,
+    oneDessert,
+    updateDessert,
+    deleteDesert,
+    deleteAllDessert,
+}
