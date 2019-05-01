@@ -67,5 +67,5 @@ let newDessert = [
 // dessert.deleteMany()
 dessert.newDessert(newDessert)
     .then(dessert => {
-        console.log('Saved Appetizer', dessert)
+        console.log('Saved Dessert', dessert)
     })

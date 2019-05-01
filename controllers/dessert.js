@@ -4,7 +4,8 @@ const dessertSchema = new mongoose.Schema({
     dessertName: String,
     directions: [String],
     picture: String,
-    ingridents: [String]
+    ingridents: [String],
+    nutritionFacts: String
 })
 
 let dessertCollection = mongoose.model('Dessert', dessertSchema)

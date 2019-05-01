@@ -1,16 +1,18 @@
-// requirements: require db/connection as 'mongoose'
-const mongoose = require('../db/connection')
-const Schema = mongoose.Schema
+const mongoose = require('../db/connection.js')
+const ObjectId = mongoose.Schema.Types.ObjectId
 
-const Category = new Schema({
-   name: String,
-   city: String,
-   contact: Number,
-   about: String,
-   portfolio: [{
-       type: Schema.Types.ObjectId,
-       ref: "Recepie"
-   }]
+// create schemas:
+const entreeSchema = new mongoose.Schema({
+    name: String,
+    description: String,
+    img: String,
+    herbId: ObjectId,
+    oilId: ObjectId,
 })
 
-module.exports = mongoose.model('Category', Category)
+let entreeCollection = mongoose.model('Entree', entreeSchema)
+
+
+module.exports = {
+    entreeCollection
+}

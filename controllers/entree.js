@@ -2,9 +2,10 @@ const mongoose = require('../db/connection.js')
 
 const entreeSchema = new mongoose.Schema({
     entreeName: String,
-    directions: String,
+    directions: [String],
     picture: String,
-    ingridents: [String]
+    ingridents: [String],
+    nutritionFacts: String
 })
 let entreeCollection = mongoose.model('Entree', entreeSchema)
 
