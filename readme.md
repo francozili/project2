@@ -7,11 +7,6 @@ Trello link https://trello.com/b/tQLri9aO/project2
 #The link to your project board is the the github link
 https://github.com/francozili/project2
 #whiteboarding
-![whiteboarding](images/whiteboard.JPG)
-![whiteboarding](images/whiteboard1.JPG)
-![whiteboarding](images/whiteboard2.JPG)
-![whiteboarding](images/whiteboard3.JPG)
-![whiteboarding](images/whiteboard4.JPG)
-![whiteboarding](images/Iwhiteboard5.JPG)
-#Wireframe
-![wireframe](images/wireframe.JPG)
+![whiteboarding](images/whitboard2.HEIC)
+![whiteboarding](images/whiteboard.HEIC)
+
