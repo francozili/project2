@@ -143,8 +143,8 @@ p{
 /* =============index of products================ */
 .appetizer-container, .dessert-container, .entree-container{
     /* display: flex;
-    flex-wrap: wrap;
-    justify-content: center; */
+    flex-wrap: wrap; */
+    justify-content: center;
 }
 #nameone{
     color: green;
