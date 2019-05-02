@@ -1,24 +1,26 @@
 <main>
     <div class="herb-container">
-        <a id='returnlink' href="/appetizer">Return to All Appetizers</a>
         <br><br>
         <div class="herb ailment">
             <h3 id="nameone"> {{ appetizer.appetizerName }} </h3>
             <div class="buttons ailbuttons">
                 <a href="/appetizer/{{appetizer.id}}/update">
-                    <input type="submit" value="Modify appetizer" class="button">
+                    <input type="submit" value="Edit" class="button">
                 </a>
                 <form action="/appetizer/{{appetizer.id}}?_method=delete" method="POST">
-                    <input type="submit" value="Delete appetizer" class="button">
-                </form>-
+                    <input type="submit" value="Delete" class="button">
+                </form>
             </div>
             <img class="picture" src="../images/{{ appetizer.picture }}" alt="" srcset="">
+            <h2>Directions</h2>
             <p>{{appetizer.directions}}</p>
+            <h2>Ingridents</h2>
             <ul>
                 {{#each appetizer.ingridents}}
                 <li>{{this}}</li>
                 {{/each}}
             </ul>
+            <h2>Nutrition Facts</h2>
             <p>
             {{appetizer.nutritionFacts}}
             </p>

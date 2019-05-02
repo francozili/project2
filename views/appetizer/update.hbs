@@ -3,31 +3,29 @@
 		<div class="herb-container edit">
 			<h2>Edit Appetizers!</h2>
 
-			<a id='returnlink' href="/appetizer/{{appetizer.id}}">Return to Appetizer</a>
+			<a id='returnlink' href="/appetizer/{{appetizer.id}}">Back to Home Page or click Icon</a>
 			<br><br>
 			<div id="edit-form" class="herb-container-show">
 
 				<form action="/appetizer/{{appetizer._id}}?_method=PUT" method="POST" id="addnew">
-					<label for="name">Name</label>
+					<label for="name">Appetizer Name</label>
 					<input type="text" name="name" id="" placeholder="{{appetizer.appetizerName}}">
 					<br>
-					<label for="picture">Image</label>
+					<label for="picture">Choose Picture</label>
 					<input type="file" name="picture" id="">
 					<br>
 					<label for="directions">Directions</label>
 					<input type="text" name="description" id="" placeholder="{{appetizer.directions}}">
 					<br>
-					<label for="appetizerName">Uses</label>
-					<input type="text" name="ailmentName" id="" placeholder="{{appetizer.appetizerName}}">
+					<label for="ingridents">Ingridents</label>
+					<input type="text" name="ingridents" id="" placeholder="{{appetizer.ingridents}}">
+					<br>
+					<label for="nutritionFacts">Nutrition Facts</label>
+					<input type="text" name="nutritionFacts" id="" placeholder="{{appetizer.nutritionFacts}}">
 					<br>
 					<input class="button" type="submit" value="Update Appetizer">
 
 				</form>
-
-				<div id="img-preview">
-					<img src="../../images/{{appetizer.picture}}">
-				</div>
-
 			</div>
 	</main>
 </div>

@@ -1,0 +1,32 @@
+<main>
+    <div class="herb-container">
+        <br><br>
+        <div class="herb ailment">
+            <h3 id="nameone"> {{ dessert.dessertName }} </h3>
+            <div class="buttons ailbuttons">
+                <a href="/dessert/{{dessert.id}}/update">
+                    <input type="submit" value="Edit" class="button">
+                </a>
+                <form action="/dessert/{{dessert.id}}?_method=delete" method="POST">
+                    <input type="submit" value="Delete" class="button">
+                </form>
+            </div>
+            <img class="picture" src="../images/{{ dessert.picture }}" alt="" srcset="">
+            <h2>Directions</h2>
+            <p>{{dessert.directions}}</p>
+            <h2>Ingridents</h2>
+            <ul>
+                {{#each dessert.ingridents}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+            <h2>Nutrition Facts</h2>
+            <p>
+            {{dessert.nutritionFacts}}
+            </p>
+
+        </div>
+    </div>
+
+
+</main>
