@@ -1,32 +1,32 @@
 <div class="background">
-    <d>
-        <h2>Dessert</h2>
 
-        <div class="herbs-container">
-            {{#each dessert}}
-            <div class="herbs">
-                <a href="/dessert/{{_id}}">
-                    <h3> {{ dessertName }} </h3>
-                    <img class="picture" src="../images/{{ picture }}" alt="" srcset="">
-                </a>
-            </div>
+    <h2 class="header2">Dessert</h2>
 
-            {{/each}}
+    <div class="dessert-container">
+        {{#each dessert}}
+        <div class="herbs">
+            <a href="/dessert/{{_id}}">
+                <h3 class="header3"> {{ dessertName }} </h3>
+                <img class="picture" src="../images/{{ picture }}" alt="" srcset="">
+            </a>
         </div>
-        <br><br>
-        <div class="forms">
-            <div class="create">
-                <p>Add to your Recipe Journal</p>
-                <a href="/dessert/new">
-                    <input class="button" id="createbutton" type="submit" value="Add Dessert">
-                </a>
-            </div>
-            <div class="deleteall">
 
-                <p>Delete All Dessert</p>
-                <form action="/dessert/?_method=delete" method="POST">
-                    <input id="createbutton" class="button" type="submit" value="Delete All">
-                </form>
-            </div>
+        {{/each}}
+    </div>
+    <br><br>
+    <div class="forms">
+        <div class="create">
+            <p>Add to your Recipe Journal</p>
+            <a href="/dessert/new">
+                <input class="button" id="createbutton" type="submit" value="Add Dessert">
+            </a>
         </div>
+        <div class="deleteall">
+
+            <p>Delete All Dessert</p>
+            <form action="/dessert/?_method=delete" method="POST">
+                <input id="createbutton" class="button" type="submit" value="Delete All">
+            </form>
+        </div>
+    </div>
 </div>
