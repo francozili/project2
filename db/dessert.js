@@ -8,7 +8,7 @@ let newDessert = [
             '2. Spread into a greased 13-in. x 9-in. baking pan. Bake at 350° for 24-28 minutes or until a toothpick inserted in the center comes out clean (do not overbake). Cool in pan on a wire rack. Spread marshmallow creme over cooled brownies.',
             '3. In a small saucepan, melt peanut butter and chocolate chips over low heat, stirring constantly until smooth. Remove from the heat; stir in cereal. Spread over top. Refrigerate until set. Cut into bars.'
     ],
-        picture: 'homemademole.png',
+        picture: 'brownies.jpg',
         ingridents: [
             '1 cup butter, softened',
             '2 cups sugar',
