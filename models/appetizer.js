@@ -3,12 +3,11 @@ const ObjectId = mongoose.Schema.Types.ObjectId
 
 // create schemas:
 const appetizerSchema = new mongoose.Schema({
-    name: String,
-    description: String,
-    img: String,
-    uses: Array,
-    price: Number,
-    inStock: Boolean,
+    appetizerName: String,
+    directions: [String],
+    picture: String,
+    ingridents: [String],
+    nutritionFacts: String
 })
 // export the donut model with module.exports
 let appetizerCollection = mongoose.model('Appetizer', appetizerSchema)

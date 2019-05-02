@@ -3,11 +3,11 @@ const ObjectId = mongoose.Schema.Types.ObjectId
 
 // create schemas:
 const dessertSchema = new mongoose.Schema({
-    name: String,
-    description: String,
-    img: String,
-    herbId: ObjectId,
-    oilId: ObjectId,
+        dessertName: String,
+        directions: [String],
+        picture: String,
+        ingridents: [String],
+        nutritionFacts: String
 })
 
 let dessertCollection = mongoose.model('Dessert', dessertSchema)

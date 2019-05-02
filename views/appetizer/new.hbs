@@ -1,10 +1,10 @@
 <main class="body">
-	<div class="herb-container edit">
+	<div class="appetizer-container">
 		<h2 class="header2">Add an Appetizer!</h2>
 
-		<a id='returnlink' href="/appetizer/">Back to Home Page or click Icon</a>
+		<a id='link' href="/appetizer/">Back to Home Page or click Icon</a>
 		<br><br>
-		<div id="edit-form" class="herb-container-show">
+		<div id="update-form" class="appetizer-container-show">
 
 			<form action="/appetizer" method="POST">
 				<label for="name">Appetizer Name</label>
@@ -14,7 +14,7 @@
 				<input type="file" name="picture" id="">
 				<br>
 				<label for="directions">Directions</label>
-				<input type="text" name="directions"  id="" placeholder="{{appetizer.directions}}">
+				<input type="text" name="directions" id="" placeholder="{{appetizer.directions}}">
 				<br>
 				<label for="ingridents">Ingridents</label>
 				<input type="text" name="ingridents" id="" placeholder="{{appetizer.ingridents}}">

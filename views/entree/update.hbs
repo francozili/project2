@@ -1,11 +1,11 @@
 <div class="background">
 	<main>
-		<div class="herb-container edit">
+		<div class="entree-container">
 			<h2>Edit Entree!</h2>
 
-			<a id='returnlink' href="/entree/{{entree.id}}">Back to Home Page or click Icon</a>
+			<a id='link' href="/entree/{{entree.id}}">Back to Home Page or click Icon</a>
 			<br><br>
-			<div id="edit-form" class="herb-container-show">
+			<div id="update-form" class="entree-container-show">
 
 				<form action="/entree/{{entree._id}}?_method=PUT" method="POST" id="addnew">
 					<label for="name">Entree Name</label>

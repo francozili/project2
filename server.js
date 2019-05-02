@@ -59,9 +59,10 @@ app.post('/appetizer', (req, res) => {
 })
 
 app.get('/appetizer/:id/update', (req, res) => {
-    appetizerApi.oneAppetizer(req.params.id).then(appi => {
+    appetizerApi.oneAppetizer(req.params.id)
+    .then(appetizer => {
         console.log(appi)
-            res.render("appetizer/update", { appi });
+            res.render("appetizer/update", { appetizer });
     })
 })
 
@@ -79,17 +80,6 @@ app.get('/appetizer/:id', (req, res) => {
     })
 })
 
-// app.put('/appetizer/:id', (req, res) => {
-//     appetizerApi.findByIdAndUpdate(req.params.id, req.body.post, { new: true }).then(() => {
-//          res.redirect("/" + req.params.id);
-//        })
-
-// )
-
-
-
-
-
 //delete single appetizer
 app.delete('/appetizer/:id', (req, res) => {
     appetizerApi.deleteAppetizer(req.params.id).then(() => {
@@ -104,7 +94,7 @@ app.delete('/appetizer', (req, res) => {
     })
 })
 
-//update single appetizer
+// update single appetizer
 // app.get('/appetizer/:id/edit', (req, res) => {
 //     appetizerApi.oneAppetizer(req.params.id)
 //         .then(appetizer => {
@@ -155,10 +145,11 @@ app.delete('/dessert', (req, res) => {
 })
 
 //update single dessert
-app.get('/dessert/:id/edit', (req, res) => {
+app.get('/dessert/:id/update', (req, res) => {
+    console.log('desert update')
     dessertApi.oneDessert(req.params.id)
         .then(dessert => {
-            res.render('dessert/edit', { dessert })
+            res.render('dessert/update', { dessert })
         })
 })
 
@@ -173,7 +164,7 @@ app.put('/dessert/:id', (req, res) => {
 // list/ index of all entree
 app.get('/entree', (req, res) => {
     entreeApi.allEntree().then(entree => {
-        console.log(entreeApi.allEntree())
+        // console.log(entreeApi.allEntree())
         res.render('entree/index', { entree })
     })
 })
@@ -209,10 +200,10 @@ app.delete('/entree', (req, res) => {
     })
 })
 //update single entree
-app.get('/entree/:id/edit', (req, res) => {
+app.get('/entree/:id/update', (req, res) => {
     entreeApi.oneEntree(req.params.id)
     .then(entree => {
-        res.render('entree/edit', { entree })
+        res.render('entree/update', { entree })
     })
 })
 

@@ -68,21 +68,21 @@ nav img{
 }
 /* =============general headers================ */
 .header1{
-    color:black;
+    color:red;
     font-size: 30px;
     font-family: john;
     text-align: center;
 }
 .header2{
     text-align: center;
-    color: black;
+    color: red;
     font-weight: bolder;
     font-family: walt;
 }
 .header3{
     font-size: 30px;
     font-family: walt;
-    color: black;
+    color: red;
     margin: 1px;
 }
 h4{
@@ -100,11 +100,11 @@ h5{
     margin: 10px auto;
     font-family: 'Roboto', sans-serif;
 }
-p{
+.paragraph{
     font-weight: bolder;
     margin: 8px 15%;
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: cold;
     text-shadow: #414141 3px 3px 10px;
 }
 
@@ -112,7 +112,7 @@ p{
 .body{
     text-align: center;
     justify-content: center;
-    background: black;
+    background: rgb(245, 117, 43);
 }
 /* =============home page================ */
 #parent{
@@ -136,9 +136,6 @@ p{
     width: 450px;
     height: 400px;
 }
-.ailbuttons {
-    justify-content: space-between;
-}
 
 /* =============index of products================ */
 .appetizer-container, .dessert-container, .entree-container{
@@ -149,20 +146,19 @@ p{
     align-items: center
 }
 #nameone{
-    color: green;
-    text-shadow: none;
+    color: red;
     font-size: 3em;
 }
 #usedfor{
     color: green;
     text-shadow: none;
 }
-#returnlink{
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    float: left;
+#link{
+    color: black;
+    font-family: walt;
+    float: right;
 }
-.herbs, .oils, .sups{
+.appetizer, .dessert, .entree{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -174,15 +170,15 @@ p{
     width: 300px;
     color: black;
 }
-.herbs:hover, .oils:hover, .sups:hover{
+.appetizer:hover, .dessert:hover, .entree:hover{
     box-shadow: 3px 3px 15px;
     background: black;
 }
-.forms{
+.input{
     display: flex;
     justify-content: space-around;
 }
-.create, .deleteall {
+.make, .delete {
  background: black;
  border-radius: 15px;
  margin: 10px 10%;
@@ -199,28 +195,27 @@ p{
     box-shadow: green 4px 4px 30px 
 }
 /* =============single product================ */
-.herb-container, .oil-container, .sup-container{
+.appetizer-container, .dessert-container, .entree-container{
     margin: 10px 15%;
     background: black;
     border-radius: 20px;
     padding: 30px;
 }
-.herb ul, .oil ul, .sup ul{
+.appetizer ul, .entree ul, .dessert ul{
     list-style: none;
     color: white;
     font-family: cold;
 }
 .buttons{
-    display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .button{
     height: 40px;
     font-size: 1.1em;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background: black;
+    font-family: walt;
+    background: orange;
     border-radius: 10px;
-    color: green;
+    color: red;
 }
 .button:hover{
     box-shadow: green 5px 5px 10px;
@@ -228,7 +223,7 @@ p{
     color: black;
 }
 /* =============edit products================ */
- #edit-form form input{
+ #update-form form input{
     height: 30px;
     width: 270px;
     margin: 5px 15px;
@@ -236,8 +231,8 @@ p{
     font-size: 1.1em;
  }
  label{
-     color: white;
-     font-family: 'Poppins', sans-serif;
+     color:white;
+     font-family: cold;
      padding: 10px;
      margin-left: 50px;
 }
@@ -253,10 +248,7 @@ p{
     justify-content: space-around;
     padding: 30px 20px;
     border: solid gray;
-    background:olive;
-    /* margin-bottom: 0px; */
-    /* margin-bottom:-900px; */
-    /* height:10vh */
+    background:brown;
 }
 
 .copy{

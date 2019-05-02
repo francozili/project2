@@ -4,7 +4,7 @@
 
     <div class="dessert-container">
         {{#each dessert}}
-        <div class="herbs">
+        <div class="dessert">
             <a href="/dessert/{{_id}}">
                 <h3 class="header3"> {{ dessertName }} </h3>
                 <img class="picture" src="../images/{{ picture }}" alt="" srcset="">
@@ -14,14 +14,14 @@
         {{/each}}
     </div>
     <br><br>
-    <div class="forms">
-        <div class="create">
+    <div class="input">
+        <div class="make">
             <p>Add to your Recipe Journal</p>
             <a href="/dessert/new">
                 <input class="button" id="createbutton" type="submit" value="Add Dessert">
             </a>
         </div>
-        <div class="deleteall">
+        <div class="delete">
 
             <p>Delete All Dessert</p>
             <form action="/dessert/?_method=delete" method="POST">

@@ -3,7 +3,7 @@
     <h2 class="header2">Entree</h2>
     <div class="entree-container">
         {{#each entree}}
-        <div class="herbs">
+        <div class="entree">
             <a href="/entree/{{_id}}">
                 <h3 class="header3"> {{ entreeName }} </h3>
                 <img class="picture" src="../images/{{ picture }}" alt="" srcset="">
@@ -13,14 +13,14 @@
         {{/each}}
     </div>
     <br><br>
-    <div class="forms">
-        <div class="create">
+    <div class="input">
+        <div class="make">
             <p>Add to your Recipe Journal</p>
             <a href="/entree/new">
                 <input class="button" id="createbutton" type="submit" value="Add Entree">
             </a>
         </div>
-        <div class="deleteall">
+        <div class="delete">
 
             <p>Delete All Entree</p>
             <form action="/entree/?_method=delete" method="POST">

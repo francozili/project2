@@ -1,11 +1,11 @@
 <div class="background">
 	<main>
-		<div class="herb-container edit">
+		<div class="appetizer-container">
 			<h2>Edit Appetizers!</h2>
 
-			<a id='returnlink' href="/appetizer/{{appetizer.id}}">Back to Home Page or click Icon</a>
+			<a id='link' href="/appetizer/{{appetizer.id}}">Back to Home Page or click Icon</a>
 			<br><br>
-			<div id="edit-form" class="herb-container-show">
+			<div id="update-form" class="appetizer-container-show">
 
 				<form action="/appetizer/{{appetizer._id}}?_method=PUT" method="POST" id="addnew">
 					<label for="name">Appetizer Name</label>

@@ -1,9 +1,9 @@
 <main>
     <div class="entree-container">
-        <br><br>
-        <div class="herb ailment">
-            <h3 id="nameone"> {{ entree.entreeName }} </h3>
-            <div class="buttons ailbuttons">
+        <br>
+        <div class="entree">
+            <h3 class="header3" id="nameone"> {{ entree.entreeName }} </h3>
+            <div class="buttons">
                 <a href="/entree/{{entree.id}}/update">
                     <input type="submit" value="Edit" class="button">
                 </a>
@@ -12,16 +12,16 @@
                 </form>
             </div>
             <img class="picture" src="../images/{{ entree.picture }}" alt="" srcset="">
-            <h2>Directions</h2>
-            <p>{{entree.directions}}</p>
-            <h2>Ingridents</h2>
+            <h2 class="header2">Directions</h2>
+            <p class="paragraph">{{entree.directions}}</p>
+            <h2 class="header2">Ingridents</h2>
             <ul>
                 {{#each entree.ingridents}}
                 <li>{{this}}</li>
                 {{/each}}
             </ul>
-            <h2>Nutrition Facts</h2>
-            <p>
+            <h2 class="header2">Nutrition Facts</h2>
+            <p class="paragraph">
             {{entree.nutritionFacts}}
             </p>
 

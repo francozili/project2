@@ -1,11 +1,11 @@
 <div class="background">
 	<main>
-		<div class="herb-container edit">
+		<div class="dessert-container">
 			<h2>Edit Dessert!</h2>
 
-			<a id='returnlink' href="/dessert/{{dessert.id}}">Back to Home Page or click Icon</a>
+			<a id='link' href="/dessert/{{dessert.id}}">Back to Home Page or click Icon</a>
 			<br><br>
-			<div id="edit-form" class="herb-container-show">
+			<div id="update-form" class="dessert-container-show">
 
 				<form action="/dessert/{{dessert._id}}?_method=PUT" method="POST" id="addnew">
 					<label for="name">Dessert Name</label>
