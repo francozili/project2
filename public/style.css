@@ -67,24 +67,23 @@ nav img{
     /* text-shadow: green; */
 }
 /* =============general headers================ */
-h1{
+.header1{
     color:black;
-    font-size: 2.6em;
-    font-family: 'Caesar Dressing', cursive;
+    font-size: 30px;
+    font-family: john;
     text-align: center;
-    /* padding-left: 50% */
 }
-h2{
+.header2{
     text-align: center;
-    color: green;
-    font-weight: bolder;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-h3{
-    font-size: 2em;
-    font-family: 'Caesar Dressing', cursive;
     color: black;
-    margin: 12px 0;
+    font-weight: bolder;
+    font-family: walt;
+}
+.header3{
+    font-size: 30px;
+    font-family: walt;
+    color: black;
+    margin: 1px;
 }
 h4{
     font-size: 1.5em;
@@ -108,34 +107,26 @@ p{
     font-family: 'Poppins', sans-serif;
     text-shadow: #414141 3px 3px 10px;
 }
-/* img{
-    height: 400vh;
-    width: 200px;
-    border-radius: 90px;
-} */
+
 /* =============content================ */
-main{
+.body{
     text-align: center;
     justify-content: center;
-    background: white;
-    /* background: url('/images/ifood.jpg'); */
-    /*background-size: 100% 100%; */
+    background: black;
 }
 /* =============home page================ */
-#container{
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0;
+#parent{
+    padding: 40px;
 }
-.home{
+.homepage{
     margin: 15px 10%;
     padding: 30px;
-    border-radius: 10px;
-    background: gold;
+    border-radius: 70px;
+    background: brown;
 }
-.home img{
-    width: 700px;
-    height: 400px;
+.homepage img{
+    width: 800px;
+    height: 500px;
 }
 /* =============ailments page================ */
 .ailment img{
@@ -302,15 +293,15 @@ main{
       height: 100px;
       width: 100px;
   }
-/* .footer p{
-    color: black;
+.footer p{
+    color: white;
     padding: 2px;
-    text-shadow: white 1px 1px 4px;
-    font-family: fantasy;
+    text-shadow: black ;
+    font-family: cold;
     font-size: 1.2em;
     margin: 0;
 }
-.footer span{
+/* .footer span{
     color: red;
     font-family: fantasy;
     text-shadow: black 1px 1px 5px;
