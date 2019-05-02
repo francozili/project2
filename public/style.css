@@ -298,6 +298,10 @@ main{
   .fa-instagram {
     color: white;
   }
+  .picture{
+      height: 100px;
+      width: 100px;
+  }
 /* .footer p{
     color: black;
     padding: 2px;

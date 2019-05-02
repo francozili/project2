@@ -10,47 +10,21 @@
                 </a>
                 <form action="/appetizer/{{appetizer.id}}?_method=delete" method="POST">
                     <input type="submit" value="Delete appetizer" class="button">
-                </form>
+                </form>-
             </div>
-            <img src="../images/{{ appetizer.picture }}" alt="" srcset="">
+            <img class="picture" src="../images/{{ appetizer.picture }}" alt="" srcset="">
             <p>{{appetizer.directions}}</p>
+            <ul>
+                {{#each appetizer.ingridents}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+            <p>
+            {{appetizer.nutritionFacts}}
+            </p>
 
         </div>
     </div>
-    <h3>Recipe for {{appetizer.appetizerName}}</h3>
-    <div class="herbs-container ailmentherbs">
 
-        {{#each appetizer}}
-        <div class="herbs">
-            <a href="/appetizer/{{_id}}">
-                <h3> {{ appetizer.appetizerName }} </h3>
-                <img src="../images/{{ appetizer.picture }}" alt="" srcset="">
-            </a>
-        </div>
-        {{/each}}
-    </div>
-    <h3>Essential Oils for {{appetizer.appetizerName}}</h3>
-    <div class="herbs-container ailmentherbs">
 
-        {{#each appetizer}}
-        <div class="herbs">
-            <a href="/appetizer/{{_id}}">
-                <h3> {{ appetizer.appetizerName }} </h3>
-                <img src="../images/{{ appetizer.picture }}" alt="" srcset="">
-            </a>
-        </div>
-        {{/each}}
-    </div>
-    <h3>Supplements for {{appetizer.appetizerName}}</h3>
-    <div class="herbs-container ailmentherbs">
-
-        {{#each appetizer}}
-        <div class="herbs">
-            <a href="/appetizer/{{_id}}">
-                <h3> {{ appetizer.appetizerName }} </h3>
-                <img src="../images/{{ appetizer.picture }}" alt="" srcset="">
-            </a>
-        </div>
-        {{/each}}
-    </div>
 </main>

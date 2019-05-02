@@ -58,12 +58,37 @@ app.post('/appetizer', (req, res) => {
     })
 })
 
+app.get('/appetizer/:id/update', (req, res) => {
+    appetizerApi.oneAppetizer(req.params.id).then(appi => {
+        console.log(appi)
+            res.render("appetizer/update", { appi });
+    })
+})
+
+app.put('/appetizer/:id', (req, res) => {
+    console.log("\n\n",req.params);
+    appetizerApi.updateAppetizer(req.params.id, req.body)
+        .then(() => {
+            res.redirect(`/appetizer/${req.params.id}`)
+        })
+})
 // show single appetizer
 app.get('/appetizer/:id', (req, res) => {
     appetizerApi.oneAppetizer(req.params.id).then(appetizer => {
         res.render('appetizer/show', { appetizer })
     })
 })
+
+// app.put('/appetizer/:id', (req, res) => {
+//     appetizerApi.findByIdAndUpdate(req.params.id, req.body.post, { new: true }).then(() => {
+//          res.redirect("/" + req.params.id);
+//        })
+
+// )
+
+
+
+
 
 //delete single appetizer
 app.delete('/appetizer/:id', (req, res) => {
@@ -80,19 +105,14 @@ app.delete('/appetizer', (req, res) => {
 })
 
 //update single appetizer
-app.get('/appetizer/:id/edit', (req, res) => {
-    appetizerApi.oneAppetizer(req.params.id)
-        .then(appetizer => {
-            res.render('appetizer/edit', { appetizer })
-        })
-})
+// app.get('/appetizer/:id/edit', (req, res) => {
+//     appetizerApi.oneAppetizer(req.params.id)
+//         .then(appetizer => {
+//             res.render('appetizer/update', { appetizer })
+//         })
+// })
 
-app.put('/appetizer/:id', (req, res) => {
-    appetizerApi.updateAppetizer(req.params.id, req.body)
-        .then(() => {
-            res.redirect(`/appetizer/${req.params.id}`)
-        })
-})
+
 
 // list/ index of all dessert
 app.get('/dessert', (req, res) => {
