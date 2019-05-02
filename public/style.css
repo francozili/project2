@@ -94,12 +94,6 @@ h4{
     font-weight: bolder;
     text-shadow: black 1px 1px 5px;
 }
-h5{
-    font-size: 1.5em;
-    color: green;
-    margin: 10px auto;
-    font-family: 'Roboto', sans-serif;
-}
 .paragraph{
     font-weight: bolder;
     margin: 8px 15%;
@@ -189,11 +183,7 @@ h5{
     border: none;
     color: black;
 }
-/* #createbutton:hover{
-    background: white;
-    color: black;
-    box-shadow: green 4px 4px 30px 
-} */
+
 /* =============single product================ */
 .appetizer-container, .dessert-container, .entree-container{
     margin: 10px 15%;
@@ -217,11 +207,7 @@ h5{
     border-radius: 10px;
     color: red;
 }
-.button:hover{
-    box-shadow: green 5px 5px 10px;
-    background: white;
-    color: black;
-}
+
 /* =============edit products================ */
  #update-form form input{
     height: 30px;
@@ -239,7 +225,7 @@ h5{
  #addnew input{
      width: 350px;
  }
-/* =============footer================ */
+
 
 .footer{
     /* height: 25%; */
@@ -298,11 +284,3 @@ h5{
     font-size: 1.2em;
     margin: 0;
 }
-/* .footer span{
-    color: red;
-    font-family: fantasy;
-    text-shadow: black 1px 1px 5px;
-}
-.footer a p:hover{
-    color: red;
-} */
