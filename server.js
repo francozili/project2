@@ -133,7 +133,7 @@ app.get('/dessert/:id', (req, res) => {
 
 //delete single dessert
 app.delete('/dessert/:id', (req, res) => {
-    dessertApi.deleteDessert(req.params.id).then(() => {
+    dessertApi.deleteDesert(req.params.id).then(() => {
         res.redirect('/dessert')
     })
 })

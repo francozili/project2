@@ -12,7 +12,6 @@ html {
     margin:0;
     background:rgb(209, 8, 8);
 }
-
 #logohome{
     height: 100px;
     padding-right: 900px;
@@ -64,7 +63,6 @@ nav img{
     color: blue;
     /* text-shadow: green; */
 }
-
 .header1{
     color:red;
     font-size: 30px;
@@ -83,7 +81,15 @@ nav img{
     color: red;
     margin: 1px;
 }
-
+/* h4{
+    font-size: 1.5em;
+    margin: 6px 0;
+    color: white;
+    letter-spacing: 1;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    text-shadow: black 1px 1px 5px;
+} */
 .paragraph{
     font-weight: bolder;
     margin: 8px 15%;
@@ -91,14 +97,11 @@ nav img{
     font-family: cold;
     text-shadow: #414141 3px 3px 10px;
 }
-
-
 .body{
     text-align: center;
     justify-content: center;
     background: rgb(245, 117, 43);
 }
-
 #parent{
     padding: 40px;
 }
@@ -115,7 +118,13 @@ nav img{
 .background{
     background-color: white;
 }
-
+/* =============ailments page================ */
+.ailment img{
+    width: 450px;
+    height: 400px;
+}
+/* =============index of products================ */
+/*  */
  #update-form form input{
     height: 30px;
     width: 270px;
@@ -132,8 +141,6 @@ nav img{
  #addnew input{
      width: 350px;
  } */
-
-
 .footer{
     /* height: 25%; */
     font-family: cold;
@@ -143,7 +150,6 @@ nav img{
     border: solid gray;
     background:brown;
 }
-
 .copy{
     text-align: center;
 }
