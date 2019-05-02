@@ -143,8 +143,10 @@ p{
 /* =============index of products================ */
 .appetizer-container, .dessert-container, .entree-container{
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
     justify-content: center;
+    align-items: center
 }
 #nameone{
     color: green;
